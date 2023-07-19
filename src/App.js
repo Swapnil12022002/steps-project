@@ -11,21 +11,15 @@ function App() {
   const [isOpen, setIsOpen] = useState(true);
 
   function stepIncrease() {
-    const stepAdder = step + 1;
-    if (stepAdder > 3) {
-      setStep(3);
-      return;
+    if (step < 3) {
+      setStep(() => step + 1);
     }
-    setStep(stepAdder);
   }
 
   function stepDecrease() {
-    const stepDeductor = step - 1;
-    if (stepDeductor < 1) {
-      setStep(1);
-      return;
+    if (step > 1) {
+      setStep(() => step - 1);
     }
-    setStep(stepDeductor);
   }
 
   function openHandler() {
