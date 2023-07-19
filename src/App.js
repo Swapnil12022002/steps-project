@@ -1,6 +1,6 @@
 import "./index.css";
 import { useState } from "react";
-const messages = [
+const stepMessages = [
   "Learn React ⚛️",
   "Apply for jobs 💼",
   "Invest your new income 🤑",
@@ -46,7 +46,7 @@ function App() {
           </div>
 
           <p className="message">
-            Step {step}: {messages[step - 1]}
+            Step {step}: {stepMessages[step - 1]}
           </p>
 
           <div className="buttons">
